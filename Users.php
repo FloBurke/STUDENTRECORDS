@@ -6,7 +6,7 @@
     
 </head>
 <body>
-    
+
 <form action="addusers.php">
   First name:<input type="text" name="forename"><br>
   Last name:<input type="text" name="surname"><br>
@@ -25,6 +25,10 @@
   <input type="radio" name="role" value="Admin"> Admin<br>
   <input type="submit" value="Add User">
 </form>
+
+<?php
+echo("submitted")
+?>
 
 </body>
 </html>
