@@ -26,9 +26,5 @@
   <input type="submit" value="Add User">
 </form>
 
-<?php
-echo("submitted")
-?>
-
 </body>
 </html>
