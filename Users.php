@@ -26,5 +26,16 @@
   <input type="submit" value="Add User">
 </form>
 
+<?php
+include_once('connection.php');
+$stmt = $conn->prepare("SELECT * FROM TblUsers");
+$stmt->execute();
+while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
+{
+echo($row["Forename"].' '.$row["Surname"].' - '.$row["House"]."<br>");
+}
+
+?>
+
 </body>
 </html>
