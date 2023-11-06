@@ -1,0 +1,1 @@
+SELECT * FROM TblUsers WHERE Role = 0 ORDER BY Surname ASC;
