@@ -6,11 +6,10 @@ error_reporting(E_ALL);
 try{
     array_map("htmlspecialchars", $_POST);
     include_once("connection.php");
-   
     $stmt = $conn->prepare("INSERT INTO TblSubjects (SubjectID,Subjectname,Teacher)VALUES (NULL,:subjectname,:teacher)");
 
-    $stmt->bindParam(':subjectname', $_POST["subjectname"]);
-    $stmt->bindParam(':teacher', $_POST["teacher"]);
+    $stmt->bindParam(':subjectname', $_POST["Subjectname"]);
+    $stmt->bindParam(':teacher', $_POST["Teacher"]);
     $stmt->execute();
 }
 catch(PDOException $e)
