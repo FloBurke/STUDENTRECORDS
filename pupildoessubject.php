@@ -25,7 +25,7 @@ $stmt = $conn->prepare("SELECT * FROM TblSubjects ORDER BY Subjectname ASC");
 $stmt->execute();
 while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
 {
-	echo('<option value='.$row["SubjectID"].'>'.$row["Subjectname"].'</option>');
+	echo('<option value='.$row["SubjectID"].'>'.$row["Subjectname"].', '.$row["Teacher"].'</option>');
 }
 ?>
 </select>
