@@ -28,6 +28,7 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
 	echo('<option value='.$row["SubjectID"].'>'.$row["Subjectname"].', '.$row["Teacher"].'</option>');
 }
 ?>
+<input type="submit" value="Add Student">
 </select>
 </body>
 </html>
